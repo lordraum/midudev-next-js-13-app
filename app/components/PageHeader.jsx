@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import styles from './PageHeader.module.css'
 
 const links = [{
   label: 'Home',
@@ -16,8 +17,8 @@ const links = [{
 
 function PageHeader () {
   return (
-    <header>
-      <nav>
+    <header className={styles.header}>
+      <nav className={styles.navigation}>
         <ul>
           {links.map(({ route, label }) => (
             <li key={route}>
